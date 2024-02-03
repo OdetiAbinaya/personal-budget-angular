@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const budget = {
+const budgetaa = {
     myBudget: [
         {
             title: 'Eat out',
@@ -20,6 +20,9 @@ const budget = {
     ]
 };
 app.use("/",express.static("public"));
+
+const budget = require("./data.json");
+console.log(budget)
 
 app.get("/hello", (req,res) => {
     res.send("Hello Abinaya");
